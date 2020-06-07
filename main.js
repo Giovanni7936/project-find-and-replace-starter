@@ -22,8 +22,33 @@ function getCellElements (currentRowElement) {
 
 // YOUR CODE GOES HERE
 
+replaceAllButton.addEventListener('click' , function(){
+    let replace = replaceInput.value
+    let look = findInput.value
+    for(let row = 0; row < rowElements.length; row +=1){
+       let jail =  getCellElements(rowElements[row])
+   
+      for(let cell = 0; cell < jail.length; cell +=1){
+        
+        let prison = jail[cell].innerHTML
+        console.log(prison);
+        if(prison.includes(look)){
+          jail[cell].innerHTML = prison.replace(look , replace)
 
-// One last thing: dedicate very careful attention to using variables and
+          
+          
+
+        }
+    
+    }
+
+    }
+  })   
+
+
+
+
+// One last thing:dedicate very careful attention to using variables and
 // naming them accurately.
 // And when you change the value you are assigning to a variable, don't
 // forget to consider changing the name to reflect the change you made! It
